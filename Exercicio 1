@@ -1,1 +1,52 @@
+// Lara Santana 
 
+class Veiculo{
+  public $modelo;
+  public $velocidade;
+  public $passageiros;
+  public $combustivel;
+}
+
+  class Carro extends Veiculo{
+   public $portas;
+   public $ano;
+
+public function Carro($modelo,$velocidade,$passageiros,$combustivel,$portas,$ano){
+
+  $this->modelo = $modelo;
+  $this->velocidade = $velocidade;
+  $this->passageiros = $passageiros;
+  $this->combustivel = $combustivel;
+  $this->portas = $portas;
+  $this->ano = $ano;
+  
+}
+}
+
+ class Aviao extends Veiculo{
+ 
+  public $uso;
+  public $tipo;
+
+public function aviao($modelo,$velocidade,$passageiros,$combustivel,$uso,$tipo){
+
+  $this->modelo = $modelo;
+  $this->velocidade = $velocidade;
+  $this->passageiros = $passageiros;
+  $this->combustivel = $combustivel;
+  $this->uso = $uso;
+  $this->tipo = $tipo;
+  
+}
+}
+
+$carro1 = new Carro("Fusca","150 KM/h",4,"40 litros",2,1940);
+$carro2 = new Carro("Ferrari","350 KM/h",2,"110 litros",2,2002);
+print_r ($carro1);
+print_r ($carro2);
+
+$aviao1 = new Aviao("Bimotor","175 KM/h",1,"400 litros","transporte","Aeronave com dois motores");
+$aviao2 = new Aviao("Airbus A380","1185 KM/h",2022,"320.000 litros","transporte","Aeronave comercial");
+print_r ($aviao1);
+print_r ($aviao2);
+?>
