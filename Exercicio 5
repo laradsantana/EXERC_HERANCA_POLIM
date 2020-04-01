@@ -1,0 +1,58 @@
+// Lara Santana
+
+<?php
+
+class Imovel {
+  public $endereco;
+  public $preco;
+}
+
+class Novo extends Imovel{
+  public $a;
+  public function Novo($endereco,$preco){
+  $this->endereco = $endereco;
+  $this->preco= $preco;
+  }
+
+ public function setA(){
+ $this->preco = $this-> preco + (($this->preco*30)/100); 
+}
+
+public function getA(){
+  echo "Um imovel novo tem um  adicional de 30 %! \n";
+  }
+}
+
+class Velho extends Imovel{
+  public $desconto;
+  public function Velho($endereco,$preco){
+  $this-> endereco = $endereco;
+  $this-> preco = $preco;
+  }
+  
+  public function setD(){
+  $this-> preco= $this-> preco - (($this->preco*20)/100); 
+  }
+  public function getD(){
+  echo "Um imovel velho tem desconto de 20 %! \n";
+  }
+}
+
+$imovel1= new Novo("Rua Alvaro batista, numero 155",150001);
+$imovel1->getA(); 
+
+echo "Primeiro Imovel:(Novo)\n";
+echo "Endereço: {$imovel1->endereco}\n";
+echo "Preço: R$ {$imovel1->preco} \n";
+$imovel1->setA();
+echo "Preco com adicional incluso: {$imovel1->preco} \n \n";
+
+$imovel2= new Velho("Rua Serafim Dorneles Vargas, numero 144", 80080);
+$imovel2->getD(); 
+
+echo "Segundo Imovel:(Velho)\n";
+echo "Endereço: {$imovel2->endereco}\n";
+echo "Preço: R$ {$imovel2->preco} \n";
+$imovel2->setD();
+echo "Preco com desconto incluso: {$imovel2->preco}";
+?>
