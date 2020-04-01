@@ -1,0 +1,42 @@
+// Lara Santana
+
+<?php
+class Animal{
+  public $nome;
+  public $idade;
+  public $som;
+  public $acao;
+}
+
+class Cachorro extends Animal{
+
+  public function Cachorro($nome,$id,$som){
+    $this->nome = $nome;
+    $this->idade = $id;
+    $this->som = $som;
+    $this->acao= "correr";
+
+  }
+}
+
+class Cavalo extends Animal{
+
+   public function Cavalo($nome,$id,$som){
+    $this->nome = $nome;
+    $this->idade = $id;
+    $this->som = $som;
+    $this->acao= "correr";
+
+  }
+}
+
+class Preguica extends Animal{
+  public function Preguica($nome,$id,$som){
+    $this->nome = $nome;
+    $this->idade = $id;
+    $this->som = $som;
+    $this->acao= "subir em árvores";
+    
+  }
+}
+?>
